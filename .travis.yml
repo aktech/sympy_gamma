@@ -7,7 +7,7 @@ virtualenv:
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_f167d6a1fa68_key -iv $encrypted_f167d6a1fa68_iv
-    -in client-secret_sympy.json.enc -out ../client-secret_sympy.json -d
+    -in client-secret.json.enc -out ../client-secret.json -d
   - npm install -g casperjs
 install: pip install -r requirements.txt
 before_script:
