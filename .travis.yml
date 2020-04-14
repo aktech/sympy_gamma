@@ -6,9 +6,9 @@ virtualenv:
   system_site_packages: true
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_f167d6a1fa68_key -iv $encrypted_f167d6a1fa68_iv
-    -in client-secret.json.enc -out ../client-secret.json -d
-  - npm install -g casperjs
+- openssl aes-256-cbc -K $encrypted_f167d6a1fa68_key -iv $encrypted_f167d6a1fa68_iv
+  -in client-secret.json.enc -out ../client-secret.json -d
+- npm install -g casperjs
 install: pip install -r requirements.txt
 before_script:
   - cd ..
@@ -30,9 +30,9 @@ script:
 
 deploy:
   provider: gae
-  keyfile: ../client-secret.json
+  keyfile: "../client-secret.json"
   project: sympy-gamma-aktech
-  no_promote: $promote
-  version: $version
+  no_promote: "$promote"
+  version: "$version"
   on:
     all_branches: true
