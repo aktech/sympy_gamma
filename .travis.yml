@@ -30,7 +30,7 @@ script:
 
 deploy:
   provider: gae
-  keyfile: client-secret.json
+  keyfile: ../client-secret.json
   project: sympy-gamma-aktech
   no_promote: $promote
   version: $version
